@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Author, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should return its full given name when invoking 'name'" do
+    author = Author.new
+    author.first_name="Max"
+    author.last_name="Mustermann"
+    expect(author.name).to eq("Max Mustermann")
+  end
 end
