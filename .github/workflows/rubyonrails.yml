@@ -18,7 +18,6 @@ jobs:
       - name: Set up Ruby 2.7.4
         uses: ruby/setup-ruby@v1 # https://github.com/ruby/setup-ruby
         with:
-          ruby-version: 2.7.4 # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically, any step doing bundle install (for the root Gemfile) or gem install bundler can be removed with bundler-cache: true
       - name: Run local RSpec tests
         run: |
