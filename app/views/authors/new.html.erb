@@ -2,12 +2,16 @@
 
 <%= form_with scope: :author, url: authors_path, local: true do |form| %><br>
     <p>
-        <%= form.label :firstname %><br>
-        <%= form.text_field :firstname %>
+        <%= form.label :first_name %><br>
+        <%= form.text_field :first_name %>
     </p>
     <p>
-        <%= form.label :lastname %><br>
-        <%= form.text_field :lastname %>
+        <%= form.label :last_name %><br>
+        <%= form.text_field :last_name %>
+    </p>
+    <p>
+        <%= form.label :homepage %><br>
+        <%= form.url_field :homepage %>
     </p>
     <p>
         <%= form.submit %>
