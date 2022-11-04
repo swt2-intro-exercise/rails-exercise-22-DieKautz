@@ -25,4 +25,15 @@ describe "New author page", type: :feature do
     find('input[type="submit"]').click
     expect(Author.count).not_to eq(before_count)
   end
+
+  it "should show validation errors" do
+    visit new_author_path
+    page.fill_in 'author[first_name]', with: 'Max'
+    page.fill_in 'author[homepage]', with: 'http://example.org'
+
+    find('input[type="submit"]').click
+
+    expect(page).to have_text('error')
+
+  end
 end
