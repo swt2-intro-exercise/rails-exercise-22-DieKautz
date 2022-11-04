@@ -7,4 +7,10 @@ RSpec.describe Author, type: :model do
     author.last_name="Mustermann"
     expect(author.name).to eq("Max Mustermann")
   end
+
+  it "should not validate without last name" do
+    author = Author.new
+    author.first_name="Max"
+    expect(author).to_not be_valid
+  end
 end
