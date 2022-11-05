@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "New author page", type: :feature do
+describe "Show author page", type: :feature do
 
   it "should not error when visiting users page" do
     @alan = FactoryBot.create :author

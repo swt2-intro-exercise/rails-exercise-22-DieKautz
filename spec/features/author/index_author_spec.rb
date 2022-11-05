@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "New author page", type: :feature do
+describe "Index author page", type: :feature do
   it "should display all authors in a table" do 
     visit authors_path
 
