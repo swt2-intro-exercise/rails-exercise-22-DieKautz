@@ -23,4 +23,12 @@ RSpec.describe Paper, type: :model do
     paper.year=2022
     expect(paper).to_not be_valid
   end
+
+  it "should not validate with non-integer year" do
+    paper = Paper.new
+    paper.title="TEST"
+    paper.venue="Germany"
+    paper.year="abc"
+    expect(paper).to_not be_valid
+  end
 end
