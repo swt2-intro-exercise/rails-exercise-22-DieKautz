@@ -11,3 +11,6 @@
 <p>
   <%= link_to "Edit", edit_author_path(@author) %>
 </p>
+<p>
+  <%= link_to 'Delete', author_path(@author), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</p>
