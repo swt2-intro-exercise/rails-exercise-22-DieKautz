@@ -14,7 +14,7 @@ describe "Show author page", type: :feature do
     @alan = FactoryBot.create :author
     visit author_path(@alan)
 
-    expect(page).to have_link(edit_author_path(@alan))
+    expect(page).to have_link 'Edit', href: edit_author_path(@alan)
   end
 
 
