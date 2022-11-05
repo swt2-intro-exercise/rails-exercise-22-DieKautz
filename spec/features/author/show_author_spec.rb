@@ -17,5 +17,12 @@ describe "Show author page", type: :feature do
     expect(page).to have_link 'Edit', href: edit_author_path(@alan)
   end
 
+  it "should link to author's delete request" do
+    @alan = FactoryBot.create :author
+    visit author_path(@alan)
+
+    expect(page).to have_css("a[data-turbo-method='delete'][href='#{author_path(@alan)}']")
+  end
+
 
 end
