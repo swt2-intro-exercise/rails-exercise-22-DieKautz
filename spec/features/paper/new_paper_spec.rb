@@ -28,7 +28,7 @@ describe "New paper page", type: :feature do
 
   it "should show validation errors" do
     visit new_paper_path
-    page.fill_in 'paper[venue]', with: 'Germany'
+    page.fill_in 'paper[title]', with: 'TEST'
     page.fill_in 'paper[year]', with: 1999
 
     find('input[type="submit"]').click
