@@ -11,16 +11,12 @@ describe "Index paper page", type: :feature do
   end
 
   it "should filter papers by year" do
-    @p1 = FactoryBot.create :paper
-    p1.title = "50er paper"
-    p1.year = 1950
-    @p2 = FactoryBot.create :paper
-    p2.title = "68er paper"
-    p2.year = 1968
+    p1 = FactoryBot.create(:paper, title: "50er paper", year: 1950)
+    p2 = FactoryBot.create(:paper, title: "68er paper", year: 1968)
 
-    visit papers_path, year: 1950
+    visit papers_path(year: 1950)
 
-    expect(page).to have_text(@p1.title)
-    expect(page).to_not have_text(@p2.title)
+    expect(page).to have_text(p1.title)
+    expect(page).to_not have_text(p2.title)
   end
 end
