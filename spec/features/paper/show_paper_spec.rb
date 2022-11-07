@@ -31,5 +31,4 @@ describe "Show Paper page", type: :feature do
     expect(page).to have_text(@comp.authors[0].name)
   end
 
-
 end
