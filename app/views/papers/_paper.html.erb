@@ -1,4 +1,10 @@
 <div id="<%= dom_id paper %>">
+
+  <p>
+    <strong>Authors:</strong>
+    <%= paper.authors.map{ |a| a.name }.join(", ") %>
+  </p>
+
   <p>
     <strong>Title:</strong>
     <%= paper.title %>
