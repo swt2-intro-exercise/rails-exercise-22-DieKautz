@@ -8,7 +8,7 @@ describe "Edit paper page", type: :feature do
 
   it "should have a multi select for authors" do
     @comp = FactoryBot.create :paper
-    visit paper_path(@comp)
+    visit edit_paper_path(@comp)
 
     expect(page).to have_css("select[multiple]")
   end
